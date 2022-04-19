@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content  {
+    background-color: #ccc;
+    width: 600px;
+    height: 500px;
+    border: 3px solid #fea604;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.E, 
+.L {
+    width: 250px;
+    height: 400px;
+    margin: 50px 20px;
+    border: 60px solid #323234;
+    position: relative;
+}
+.E {
+    border-right: none;
+
+}
+.L {
+    border-right: none;
+    border-top: none;
+}
+.E::before {
+    content: "";
+    width: 190px;
+    height: 60px;
+    background-color: #323234;
+    position: absolute;
+    bottom: 120px;
+}
+span {
+    width: 40px;
+    height: 40px;
+    background-color: #fea604;
+    margin: 10px;
+    position: absolute;
+    right: 0px;
+}
+.E span {
+    top: -60px;
+    animation: animated-shape-one 6s linear 3s infinite;
+    animation-fill-mode: backwards;
+}
+.L span {
+    bottom: -60px;
+    animation: animated-shape-two 6s linear  infinite;
+    animation-fill-mode: backwards;
+}  
+@keyframes animated-shape-two {
+    15% {
+        transform: translateX(-190px);
+        opacity: 1;
+    }
+    25% {
+        transform: translateX(-190px) translateY(-340px);
+        opacity: 1;
+    }
+    50% {
+        transform: translateX(-190px) translateY(-340px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(-190px) translateY(-340px);
+        opacity: 0;
+    }
+}
+@keyframes animated-shape-one {
+    5% {
+        transform: translateX(-190px);
+    }
+    10% {
+        
+        transform: translateX(-190px) translateY(160px);
+    }
+    15% {
+        transform: translatey(160px);
+    }
+    20% {
+        transform: translatex(-190px) translateY(160px);
+    }
+    25% {
+        transform: translateX(-190px) translateY(340px);
+    }
+    30% {
+        transform: translateY(340px);
+    }
+    35% {
+        transform: translateX(-190px) translateY(340px);
+    }
+    40% {
+        transform: translatex(-190px);
+    }
+    45% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
