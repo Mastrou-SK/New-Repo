@@ -1,2 +1,2 @@
-# New-Repo
-My First Project
+# Challenge 02
+Elzero Web School Front End
